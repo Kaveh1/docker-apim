@@ -1,0 +1,38 @@
+2018-05-23 13:59:58,094 [-] [Timer-7]  WARN KeyTemplateRetriever Failed retrieving throttling data from remote endpoint: Connection refused (Connection refused). Retrying after 15 seconds...
+2018-05-23 13:59:58,094 [-] [Timer-6]  WARN BlockingConditionRetriever Failed retrieving Blocking Conditions from remote endpoint: Connection refused (Connection refused). Retrying after 15 seconds...
+2018-05-23 14:00:13,100 [-] [Timer-6]  WARN BlockingConditionRetriever Failed retrieving Blocking Conditions from remote endpoint: Connection refused (Connection refused). Retrying after 15 seconds...
+2018-05-23 14:00:13,100 [-] [Timer-7]  WARN KeyTemplateRetriever Failed retrieving throttling data from remote endpoint: Connection refused (Connection refused). Retrying after 15 seconds...
+2018-05-23 14:00:17,643 [-] [Framework Event Dispatcher]  WARN AndesConfigurationManager Error when trying to read property : transaction/maxWaitTimeout. Switching to default value : 30
+2018-05-23 14:00:24,980 [-] [Timer-8]  WARN AppDeployerServiceComponent Waiting for required OSGi services: org.wso2.carbon.application.deployer.synapse.service.SynapseAppDeployerService,
+2018-05-23 14:00:24,993 [-] [Timer-9]  WARN StartupFinalizerServiceComponent Waiting for required OSGi services: org.wso2.carbon.application.deployer.service.CappDeploymentService,org.wso2.carbon.throttling.agent.ThrottlingAgent,
+2018-05-23 14:00:28,105 [-] [Timer-7]  WARN KeyTemplateRetriever Failed retrieving throttling data from remote endpoint: Connection refused (Connection refused). Retrying after 15 seconds...
+2018-05-23 14:00:28,105 [-] [Timer-6]  WARN BlockingConditionRetriever Failed retrieving Blocking Conditions from remote endpoint: Connection refused (Connection refused). Retrying after 15 seconds...
+2018-05-23 14:00:43,110 [-] [Timer-6]  WARN BlockingConditionRetriever Failed retrieving Blocking Conditions from remote endpoint: Connection refused (Connection refused). Retrying after 15 seconds...
+2018-05-23 14:00:43,110 [-] [Timer-7]  WARN KeyTemplateRetriever Failed retrieving throttling data from remote endpoint: Connection refused (Connection refused). Retrying after 15 seconds...
+2018-05-23 14:00:57,937 [-] [Framework Event Dispatcher]  WARN QpidServiceComponent MQTT Transport is disabled as per configuration.
+2018-05-23 14:00:58,117 [-] [Timer-7]  WARN KeyTemplateRetriever Failed retrieving throttling data from remote endpoint: Connection refused (Connection refused). Retrying after 15 seconds...
+2018-05-23 14:00:58,117 [-] [Timer-6]  WARN BlockingConditionRetriever Failed retrieving Blocking Conditions from remote endpoint: Connection refused (Connection refused). Retrying after 15 seconds...
+2018-05-23 14:00:58,424 [-] [JMSThreadsf68a04a0-45f4-4e65-b347-a4490302db5a-1]  WARN JMSUtils Cannot locate destination : throttleData
+2018-05-23 14:07:20,148 [-] [DataBridge-tcp://localhost:7612-pool-6-thread-1] ERROR DataEndpoint Unable to send events to the endpoint. 
+org.wso2.carbon.databridge.agent.exception.DataEndpointException: Cannot send Events
+	at org.wso2.carbon.databridge.agent.endpoint.thrift.ThriftDataEndpoint.send(ThriftDataEndpoint.java:88)
+	at org.wso2.carbon.databridge.agent.endpoint.DataEndpoint$EventPublisher.publish(DataEndpoint.java:314)
+	at org.wso2.carbon.databridge.agent.endpoint.DataEndpoint$EventPublisher.run(DataEndpoint.java:272)
+	at java.lang.Thread.run(Thread.java:748)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.thrift.transport.TTransportException
+	at org.apache.thrift.transport.TIOStreamTransport.read(TIOStreamTransport.java:132)
+	at org.apache.thrift.transport.TTransport.readAll(TTransport.java:86)
+	at org.apache.thrift.protocol.TBinaryProtocol.readAll(TBinaryProtocol.java:429)
+	at org.apache.thrift.protocol.TBinaryProtocol.readI32(TBinaryProtocol.java:318)
+	at org.apache.thrift.protocol.TBinaryProtocol.readMessageBegin(TBinaryProtocol.java:219)
+	at org.apache.thrift.TServiceClient.receiveBase(TServiceClient.java:69)
+	at org.wso2.carbon.databridge.commons.thrift.service.general.ThriftEventTransmissionService$Client.recv_publish(ThriftEventTransmissionService.java:168)
+	at org.wso2.carbon.databridge.commons.thrift.service.general.ThriftEventTransmissionService$Client.publish(ThriftEventTransmissionService.java:155)
+	at org.wso2.carbon.databridge.agent.endpoint.thrift.ThriftDataEndpoint.send(ThriftDataEndpoint.java:81)
+	... 8 more
+2018-05-23 14:07:20,418 [-] [Thread-20]  WARN MediationPersistenceManager Mediation persistence manager is either not initialized or not in the 'accepting' mode. Ignoring the save request.

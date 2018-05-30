@@ -25,5 +25,5 @@ target/
 wso2*/scripts
 
 notes.txt
-**/files/*
+#####**/files/*
 !**/files/init.sh
